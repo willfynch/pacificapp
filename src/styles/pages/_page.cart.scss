@@ -1,0 +1,20 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--grid-gap);
+
+
+    width: var(--max-width);
+    margin-bottom: var(--font-xxl);
+    margin-top: var(--font-xxl);
+
+    
+}
+
+
+@media screen and (max-width: 920px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        width: 80vw;
+    }
+}

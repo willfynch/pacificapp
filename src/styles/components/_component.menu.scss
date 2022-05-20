@@ -1,0 +1,85 @@
+.menu-container {
+    width: var(--max-width);
+    display: flex;
+    justify-content: start;
+
+    .menu-main-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        padding: 0;
+
+        .menu-item {
+            position: relative;
+            .menu-item-text {
+                padding-right: 40px;
+                padding-bottom: 20px;
+                color: var(--color-text);
+                font-size: var(--font-md);
+                font-weight: var(--font-bold);
+                font-family: var(--base-font);
+                text-decoration: none;
+            }
+
+            .active {
+                color: var(--color-primary);
+                text-decoration: underline;
+                text-underline-offset: .5rem;
+            }
+
+            .menu-item-text:hover, .menu-item-text:active {
+                color: var(--color-primary);
+            }
+
+
+           .menu-dropdown-container {
+               position: absolute;
+               top: 2.5rem;
+               display: none;
+               background-color: var(--color-bg);
+               
+               .menu-children {
+                padding-left: 0;
+                .menu-child-item {
+                    display: block;
+                    list-style-type: none;
+                    padding-bottom: 5px;
+                    
+                    .menu-child-item-text {
+                        display: block;
+                        color: var(--color-text);
+                        text-decoration: none;
+                        font-size: var(--font-md);
+                        font-weight: var(--font-bold);
+                        font-family: var(--base-font);
+                        
+                    }
+                    .menu-child-item-text:hover  {
+                        color: var(--color-primary);
+                    }
+                    .active  {
+                        color: var(--color-primary);
+                        text-decoration: underline;
+                        text-underline-offset: .5rem;
+                    }
+                }
+               }
+           }
+
+           .menu-item-text:hover + .menu-dropdown-container, .menu-dropdown-container:hover {
+               display: block;
+           }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .menu-container {
+        width: 100%;
+    }
+}
+
+    

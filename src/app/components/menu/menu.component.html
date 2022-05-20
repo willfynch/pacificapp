@@ -1,0 +1,39 @@
+<nav class="menu-container" aria-label="Menu">
+    <ul class="menu-main-list">
+       <li class="menu-item" *ngFor="let menuItem of menuItems">
+            <a 
+                *ngIf="menuItem.children.length == 0"
+                [routerLink]="menuItem.path"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}"
+                class="menu-item-text">
+                {{menuItem.name}}
+            </a>
+            <a 
+                *ngIf="menuItem.children.length > 0"
+                data-dropdown
+                [routerLink]="menuItem.path"
+                routerLinkActive="active"
+                class="menu-item-text">
+                {{menuItem.name}}
+            </a>
+            <div 
+                *ngIf="menuItem.children.length > 0" 
+                class="menu-dropdown-container">
+                <ul class="menu-children">
+                    <li class="menu-child-item" *ngFor="let menuChild of menuItem.children">
+                        <a
+                            class="menu-child-item-text" 
+                             
+                            routerLink={{menuChild.path}}  
+                            routerLinkActive="active"
+                            >
+                            {{menuChild.name}}
+                            </a> 
+                    </li>
+                </ul>
+            </div>
+       </li> 
+    </ul>
+
+</nav>

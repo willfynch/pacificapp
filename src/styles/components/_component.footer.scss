@@ -1,0 +1,18 @@
+.footer-wrapper {
+    width: 100vw;
+    max-width: 100%;
+    background-color: var(--color-footer);
+    height: 200px;
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        span {
+            margin: 50px 50px 0 0;
+            color: var(--color-text);
+            font-size: var(--font-lg);
+            font-family: var(--base-font);
+        }
+    }
+
+}

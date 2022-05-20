@@ -1,0 +1,9 @@
+<div class="card-container">
+    <ng-container *ngFor="let cartItem of cartItems">
+        <app-card
+            class="cart-card"
+            [cartData]="cartItem"
+        >
+        </app-card>
+    </ng-container>
+</div>

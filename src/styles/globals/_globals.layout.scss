@@ -1,0 +1,26 @@
+/* ALL LAYOUT IS HERE */
+
+:root {
+    --max-width: 940px;
+    --grid-gap: 40px;
+}
+
+body {
+    background-color: var(--color-bg);
+    margin: 0;
+}
+
+
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+router-outlet + * {
+    min-height: 80vh;
+}
+
+

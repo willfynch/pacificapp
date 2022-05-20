@@ -1,0 +1,44 @@
+app-card {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--base-font);
+    font-size: var(--font-md);
+    
+    .card-list-container {
+        flex: 1;
+        padding: 20px;
+        background-color: var(--color-text);
+        display: block;
+        
+        .card-list-item {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            .card-list-item-left-price, .card-list-item-right {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    .card-footer {
+        padding: 20px;
+        background-color: var(--color-primary);
+        .card-tax-amount-area, .card-total-area {
+            display: flex;
+            justify-content: space-between;
+            span {
+                color: var(--color-text)
+            }
+        }
+    }
+}
+
+
+    
+
+    
+
+
+
+
+
